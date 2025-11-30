@@ -1,0 +1,7 @@
+a=1
+b=2
+print("ADDITION OF TWO NO.",a+b)
+print("SUBTRACTION OF TWO NUMBERS",a-b)
+print("MULTIPLICATION OF A TWO NO. IS ",a*b)
+print("DIVISION OF TWO NUMBERS IS",a/b)
+print("PERCENTAGE OF A TWO NUMBERS IS",a%b)
