@@ -8,6 +8,8 @@ def isGreater(a,b):
      else:
          print("SECOND NO. IS GREATER OR EQUAL")
 
+
+
 def isLesser(a,b):
      pass
 
