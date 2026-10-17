@@ -431,3 +431,44 @@ class Employee:
 
 e = Employee("Aditya Dwivedi",1000000)
 print(e.first_name())  
+
+# Program to find the longest substring without repeating characters.
+
+# Take a string as input from the user.
+text = input("Enter a string: ")
+
+# Store the starting index of the current substring.
+start = 0
+
+# Store the maximum length found so far.
+max_length = 0
+
+# Create a dictionary to store each character's most recent index.
+last_seen = {}
+
+# Visit every character in the string using its index.
+for i in range(len(text)):
+
+    # Store the current character.
+    ch = text[i]
+
+    # Check whether the character appeared inside the current substring.
+    if ch in last_seen and last_seen[ch] >= start:
+
+        # Move the start past the previous occurrence of this character.
+        start = last_seen[ch] + 1
+
+    # Update the most recent index of the current character.
+    last_seen[ch] = i
+
+    # Calculate the length of the current substring.
+    current_length = i - start + 1
+
+    # Check whether the current substring is the longest so far.
+    if current_length > max_length:
+
+        # Update the maximum substring length.
+        max_length = current_length
+
+# Display the maximum length.
+print("Longest substring length:", max_length)
