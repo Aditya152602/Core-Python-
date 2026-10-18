@@ -472,3 +472,64 @@ for i in range(len(text)):
 
 # Display the maximum length.
 print("Longest substring length:", max_length)
+
+
+# Program to search for a number using binary search.
+
+# Take the number of elements from the user.
+n = int(input("Enter the number of elements: "))
+
+# Create an empty list to store the sorted numbers.
+numbers = []
+
+# Repeat the loop n times.
+for i in range(n):
+
+    # Take one integer from the user.
+    num = int(input("Enter a number in sorted order: "))
+
+    # Add the number to the list.
+    numbers.append(num)
+
+# Take the number to search for.
+target = int(input("Enter the number to search: "))
+
+# Set the left boundary to the first index.
+left = 0
+
+# Set the right boundary to the last index.
+right = len(numbers) - 1
+
+# Continue searching while the search area is not empty.
+while left <= right:
+
+    # Calculate the middle index.
+    mid = (left + right) // 2
+
+    # Check whether the middle number is the target.
+    if numbers[mid] == target:
+
+        # Display the index where the target was found.
+        print("Number found at index:", mid)
+
+        # Stop searching after finding the target.
+        break
+
+    # Check whether the target is greater than the middle number.
+    elif target > numbers[mid]:
+
+        # Ignore the left half and search the right half.
+        left = mid + 1
+
+    # Run this block when the target is smaller than the middle number.
+    else:
+
+        # Ignore the right half and search the left half.
+        right = mid - 1
+
+# Run this block if the loop ended without finding the target.
+else:
+
+    # Display a message if the target is not present.
+    print("Number not found.")
+
