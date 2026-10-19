@@ -533,3 +533,35 @@ else:
     # Display a message if the target is not present.
     print("Number not found.")
 
+# Program to remove duplicates while preserving order.
+
+# Take the number of elements from the user.
+n = int(input("Enter the number of elements: "))
+
+# Create an empty list to store the numbers.
+numbers = []
+
+# Repeat the loop n times.
+for i in range(n):
+
+    # Take one integer from the user.
+    num = int(input("Enter a number: "))
+
+    # Add the number to the original list.
+    numbers.append(num)
+
+# Create an empty list to store unique numbers.
+result = []
+
+# Visit every number in the original list.
+for num in numbers:
+
+    # Check whether the number is not already in the result.
+    if num not in result:
+
+        # Add the number to the result list.
+        result.append(num)
+
+# Display the list without duplicates.
+print("List after removing duplicates:", result)
+
