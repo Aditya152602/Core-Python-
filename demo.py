@@ -565,3 +565,46 @@ for num in numbers:
 # Display the list without duplicates.
 print("List after removing duplicates:", result)
 
+
+# Program to find the next greater element to the right.
+
+# Take the number of elements from the user.
+n = int(input("Enter the number of elements: "))
+
+# Create an empty list to store the numbers.
+numbers = []
+
+# Repeat the loop n times.
+for i in range(n):
+
+    # Take one integer from the user.
+    num = int(input("Enter a number: "))
+
+    # Add the number to the list.
+    numbers.append(num)
+
+# Create a result list filled with -1.
+result = [-1] * n
+
+# Create an empty stack to store indices.
+stack = []
+
+# Visit each number from left to right.
+for i in range(n):
+
+    # Check whether the stack has indices to process.
+    while stack and numbers[i] > numbers[stack[-1]]:
+
+        # Remove the index whose next greater element has been found.
+        index = stack.pop()
+
+        # Store the current number as that index's answer.
+        result[index] = numbers[i]
+
+    # Push the current index onto the stack.
+    stack.append(i)
+
+# Display the next greater elements.
+print("Next greater elements:", result)
+
+
