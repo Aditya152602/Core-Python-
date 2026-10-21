@@ -16,4 +16,4 @@ def very_slow_func():
 while(data:=input("Enter the value: ")):
     print(data)
     if data == "q":
-        break 
+        break
